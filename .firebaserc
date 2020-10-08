@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "primer-parcial-laboratorio-iv": {
+      "hosting": {
+        "PrimerParcial": [
+          "primer-parcial-laboratorio-iv"
+        ]
+      }
+    }
+  }
+}
