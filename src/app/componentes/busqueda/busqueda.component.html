@@ -1,0 +1,39 @@
+<div class="jumbotron">
+    <div class="container">
+      <!-- <div class="row">
+        <div class="col-md-11">
+          <div *ngIf="listaActores">
+            
+            <app-tabla-actores [listaActores]="listaActores" (actorSeleccionado)="actorSelec($event)"></app-tabla-actores>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div *ngIf="actorSeleccionado">
+            <app-detalle-actores [actorSeleccionado]="actorSeleccionado"></app-detalle-actores>
+            <p><a class="btn btn-secondary" role="button" (click)="onLimpiar()">Limpiar</a></p>
+          </div>
+        </div>
+     </div> -->
+     <app-tabla-actores *ngIf="listaActores" [listaActores]="listaActores" (actorSeleccionado)="actorSelec($event)"></app-tabla-actores>
+    </div>
+  </div>
+
+
+  <div *ngIf="actorSeleccionado">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <app-borrar-actor (borrarActor)="borrarAct($event)"></app-borrar-actor>
+      </div>
+      <div class="col-md-4">
+          <h2>Detalle Actor</h2>
+          <app-detalle-actores [actorSeleccionado]="actorSeleccionado"></app-detalle-actores>
+          <p><a class="btn btn-secondary" role="button" (click)="onLimpiar()">Limpiar</a></p>
+        </div>
+        <div class="col-md-4">
+          <app-modificar-actor [actor]="actorSeleccionado" (actorMod)="modificarActor($event)"></app-modificar-actor>
+        </div>
+      </div>
+    </div>
+
+  </div>

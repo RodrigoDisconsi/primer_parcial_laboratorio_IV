@@ -15,6 +15,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.component';
 import { AltaActorComponent } from './componentes/alta-actor/alta-actor.component';
 import { BienvenidaComponent } from './componentes/bienvenida/bienvenida.component';
+import { BusquedaComponent } from './componentes/busqueda/busqueda.component';
+import { TablaActoresComponent } from './componentes/tabla-actores/tabla-actores.component';
+import { DetalleActoresComponent } from './componentes/detalle-actores/detalle-actores.component';
+import { BorrarActorComponent } from './componentes/borrar-actor/borrar-actor.component';
+import { ModificarActorComponent } from './componentes/modificar-actor/modificar-actor.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,12 @@ import { BienvenidaComponent } from './componentes/bienvenida/bienvenida.compone
     CabeceraComponent,
     TablaPaisesComponent,
     AltaActorComponent,
-    BienvenidaComponent
+    BienvenidaComponent,
+    BusquedaComponent,
+    TablaActoresComponent,
+    DetalleActoresComponent,
+    BorrarActorComponent,
+    ModificarActorComponent
   ],
   imports: [
     BrowserModule,

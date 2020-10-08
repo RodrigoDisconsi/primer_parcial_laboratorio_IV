@@ -16,7 +16,7 @@ export class TablaPaisesComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.paisService.obtenerPaisesNorthAmerica().subscribe(x =>{
+    this.paisService.obtenerPaises().subscribe(x =>{
       this.listaPaises = x;
     });
   }
