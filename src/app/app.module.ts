@@ -10,10 +10,19 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
 import { FormsModule } from '@angular/forms';
 import { environment } from '../environments/environment';
+import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.component';
+import { AltaActorComponent } from './componentes/alta-actor/alta-actor.component';
+import { BienvenidaComponent } from './componentes/bienvenida/bienvenida.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CabeceraComponent,
+    TablaPaisesComponent,
+    AltaActorComponent,
+    BienvenidaComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +31,8 @@ import { environment } from '../environments/environment';
     MaterialModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
