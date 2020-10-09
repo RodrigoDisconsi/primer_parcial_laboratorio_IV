@@ -1,0 +1,17 @@
+<h4 class="d-flex justify-content-between align-items-center mb-3">
+    <span class="text-muted">Peliculas</span>
+  </h4>
+  <ul class="list-group mb-3">
+    <li *ngFor="let pelicula of listaPeliculas" class="list-group-item d-flex justify-content-between lh-condensed" (click)="onActor(actor)">
+      <div>
+        <h6 class="my-0">{{pelicula.nombre}}</h6>
+        <small class="text-muted">Género: {{pelicula.tipo}}</small>
+        <br>
+        <small class="text-muted">Fecha de estreno: {{pelicula.fecha_de_estreno}}</small>
+        <small class="text-muted">Cantidad de publico: {{pelicula.cantidad_publico}}</small>
+      </div>
+      <!-- <img [src]="actor.foto" width="120px" height="120px"> -->
+
+    </li>
+  </ul>
+

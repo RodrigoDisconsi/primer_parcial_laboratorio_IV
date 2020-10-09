@@ -17,4 +17,9 @@ export class PaisesService {
   public obtenerPaisesNorthAmerica(){
     return this.http.get(this.url + "regionalbloc/NAFTA");
   }
+
+  public obtenerPaisesXNombre(nombre:string){
+    return this.http.get(this.url + `name/${nombre}`);
+  }
+
 }

@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { PeliculaInterface } from '../models/pelicula-interface';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -26,4 +28,16 @@ export class FirebaseService {
   removeObj(entidad:string, obj:any){
     return this.afs.collection(entidad).doc(obj.id).delete();
   }
+
+  getPeliculasXActor(obj:any){
+  return this.afs.collection('peliculas', ref => ref.where('actor', '==', obj)).snapshotChanges()
+  .pipe(map(changes => {
+    return changes.map(action => {
+      const data = action.payload.doc.data() as PeliculaInterface;
+      return data;
+    });
+  }));
+  }
+
+
 }
