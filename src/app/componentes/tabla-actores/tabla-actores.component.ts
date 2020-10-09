@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, Input, Output, EventEmitter, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, Input, Output, EventEmitter, ViewChild, OnInit } from '@angular/core';
 // import { MatPaginator } from '@angular/material/paginator';
 // import { MatTableDataSource } from '@angular/material/table';
 import { ActorInterface } from 'src/app/models/actor-interface';
@@ -8,7 +8,7 @@ import { ActorInterface } from 'src/app/models/actor-interface';
   templateUrl: './tabla-actores.component.html',
   styleUrls: ['./tabla-actores.component.scss']
 })
-export class TablaActoresComponent implements AfterViewInit {
+export class TablaActoresComponent implements OnInit {
 
   // @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -18,12 +18,11 @@ export class TablaActoresComponent implements AfterViewInit {
   public displayedColumns:string[];
 
   constructor() { 
-    
-  }
-
-  ngAfterViewInit() {
-    // this.dataSource = new MatTableDataSource<ActorInterface>(this.listaActores);
     this.displayedColumns = ['nombre', 'apellido', 'sexo', 'fecha de nacimiento', 'nacionalidad' , 'foto', 'acciones'];
+  }
+  
+  ngOnInit(){
+
   }
 
   seleccionarActor(actor:ActorInterface){
