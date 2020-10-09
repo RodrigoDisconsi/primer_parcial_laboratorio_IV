@@ -19,7 +19,7 @@ export class BusquedaComponent implements OnInit {
   ngOnInit(): void {
     this.fs.getAll('actores').subscribe(actores => {
       this.listaActores = actores;
-    })
+    });
   }
 
   actorSelec(e){
