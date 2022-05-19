@@ -14,7 +14,6 @@ import { environment } from '../environments/environment';
 import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.component';
-import { AltaActorComponent } from './componentes/alta-actor/alta-actor.component';
 import { BienvenidaComponent } from './componentes/bienvenida/bienvenida.component';
 import { BusquedaComponent } from './componentes/busqueda/busqueda.component';
 import { TablaActoresComponent } from './componentes/tabla-actores/tabla-actores.component';
@@ -30,13 +29,15 @@ import { ListadoPeliculasComponent } from './componentes/listado-peliculas/lista
 import { LoginComponent } from './componentes/login/login.component';
 import { DetalleGithubComponent } from './componentes/detalle-github/detalle-github.component';
 import { AltaRepartidorComponent } from './componentes/alta-repartidor/alta-repartidor.component';
+import { ListadoRepartidoresComponent } from './componentes/listado-repartidores/listado-repartidores.component';
+import { DetalleRepartidoresComponent } from './componentes/detalle-repartidores/detalle-repartidores.component';
+import { MasterRepatidoresComponent } from './componentes/master-repatidores/master-repatidores.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CabeceraComponent,
     TablaPaisesComponent,
-    AltaActorComponent,
     BienvenidaComponent,
     BusquedaComponent,
     TablaActoresComponent,
@@ -51,7 +52,10 @@ import { AltaRepartidorComponent } from './componentes/alta-repartidor/alta-repa
     ListadoPeliculasComponent,
     LoginComponent,
     DetalleGithubComponent,
-    AltaRepartidorComponent
+    AltaRepartidorComponent,
+    ListadoRepartidoresComponent,
+    DetalleRepartidoresComponent,
+    MasterRepatidoresComponent
   ],
   imports: [
     BrowserModule,
