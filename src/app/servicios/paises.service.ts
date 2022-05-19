@@ -6,12 +6,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PaisesService {
 
-  private url = 'https://restcountries.eu/rest/v2/';
+  private url = 'https://restcountries.com/v2/';
 
   constructor(private http: HttpClient) { }
 
-  public obtenerPaises() {
-    return this.http.get(this.url);
+  public obtenerPaises(param:string = "") {
+    return this.http.get(this.url + param);
   }
 
   public obtenerPaisesNorthAmerica(){

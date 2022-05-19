@@ -8,7 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { environment } from '../environments/environment';
 import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -26,6 +27,9 @@ import { ActorPeliculaComponent } from './componentes/actor-pelicula/actor-pelic
 import { DetallePaisComponent } from './componentes/detalle-pais/detalle-pais.component';
 import { DetallePeliculaComponent } from './componentes/detalle-pelicula/detalle-pelicula.component';
 import { ListadoPeliculasComponent } from './componentes/listado-peliculas/listado-peliculas.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { DetalleGithubComponent } from './componentes/detalle-github/detalle-github.component';
+import { AltaRepartidorComponent } from './componentes/alta-repartidor/alta-repartidor.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,10 @@ import { ListadoPeliculasComponent } from './componentes/listado-peliculas/lista
     ActorPeliculaComponent,
     DetallePaisComponent,
     DetallePeliculaComponent,
-    ListadoPeliculasComponent
+    ListadoPeliculasComponent,
+    LoginComponent,
+    DetalleGithubComponent,
+    AltaRepartidorComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +61,8 @@ import { ListadoPeliculasComponent } from './componentes/listado-peliculas/lista
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
     HttpClientModule
   ],
   providers: [],

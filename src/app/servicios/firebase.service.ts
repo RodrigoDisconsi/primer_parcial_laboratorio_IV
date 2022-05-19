@@ -30,13 +30,7 @@ export class FirebaseService {
   }
 
   getPeliculasXActor(obj:any){
-  return this.afs.collection('peliculas', ref => ref.where('actor', '==', obj)).snapshotChanges()
-  .pipe(map(changes => {
-    return changes.map(action => {
-      const data = action.payload.doc.data() as PeliculaInterface;
-      return data;
-    });
-  }));
+  return this.afs.collection('peliculas', ref => ref.where('actor', '==', obj)).valueChanges();
   }
 
 
