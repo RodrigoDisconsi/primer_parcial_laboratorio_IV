@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { RepartidorInterface } from 'src/app/models/repartidor-interface';
 
 @Component({
   selector: 'app-detalle-repartidores',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetalleRepartidoresComponent implements OnInit {
 
+  @Input() repartidorSeleccionado:RepartidorInterface;
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

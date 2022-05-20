@@ -1,6 +1,4 @@
 import { Component, AfterViewInit, Input, Output, EventEmitter, ViewChild, OnInit } from '@angular/core';
-// import { MatPaginator } from '@angular/material/paginator';
-// import { MatTableDataSource } from '@angular/material/table';
 import { ActorInterface } from 'src/app/models/actor-interface';
 
 @Component({

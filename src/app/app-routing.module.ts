@@ -12,7 +12,7 @@ import { MasterRepatidoresComponent } from './componentes/master-repatidores/mas
 const routes: Routes = [
   {path: '', component: BienvenidaComponent},
   {path: 'Login', component: LoginComponent},
-  {path: 'altaRepartidor', component: AltaRepartidorComponent, canActivate:[LoginActiveGuard]},
+  {path: 'altaRepartidor', component: AltaRepartidorComponent, canActivate:[LoginActiveGuard], loadChildren: () => import('../app/componentes/alta-repartidor/alta-repartidor.module').then(m => m.AltaRepartidorModule)},
   {path: 'repartidores', component: MasterRepatidoresComponent},
   // {path: 'actor/listado', component: BusquedaComponent},
   // {path: 'peliculas/alta', component: PeliculaAltaComponent},

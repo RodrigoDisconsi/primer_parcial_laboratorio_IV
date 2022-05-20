@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { RepartidorInterface } from 'src/app/models/repartidor-interface';
 
 @Component({
   selector: 'app-listado-repartidores',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadoRepartidoresComponent implements OnInit {
 
-  constructor() { }
+  @Input() listaRepartidores:RepartidorInterface[];
+  @Output() repartidorSelecc = new EventEmitter<RepartidorInterface>();
+  public displayedColumns:string[];
 
-  ngOnInit(): void {
+  constructor() { 
+    this.displayedColumns = ['nombre', 'edad', 'capacidad translado', 'unidad propia', 'nacionalidad', 'acciones'];
+  }
+  
+  ngOnInit(){
+
   }
 
+  seleccionarRepartidor(rep:RepartidorInterface){
+    this.repartidorSelecc.emit(rep);
+  }
 }

@@ -7,7 +7,8 @@
 {
   "files": [],
   "compilerOptions": {
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "javascript.implicitProjectConfig.experimentalDecorators": true
   },  
   "references": [
     {

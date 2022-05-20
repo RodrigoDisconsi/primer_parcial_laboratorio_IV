@@ -3,6 +3,6 @@ export interface RepartidorInterface {
     nombre?:string;
     edad?:number;
     capTrans?:number;
-    nacionalidad?:string;
+    nacionalidad?:any;
     unidadPropia?:boolean;
 }

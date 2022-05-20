@@ -13,7 +13,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { environment } from '../environments/environment';
 import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 import { HttpClientModule } from '@angular/common/http';
-import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.component';
 import { BienvenidaComponent } from './componentes/bienvenida/bienvenida.component';
 import { BusquedaComponent } from './componentes/busqueda/busqueda.component';
 import { TablaActoresComponent } from './componentes/tabla-actores/tabla-actores.component';
@@ -28,7 +27,6 @@ import { DetallePeliculaComponent } from './componentes/detalle-pelicula/detalle
 import { ListadoPeliculasComponent } from './componentes/listado-peliculas/listado-peliculas.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { DetalleGithubComponent } from './componentes/detalle-github/detalle-github.component';
-import { AltaRepartidorComponent } from './componentes/alta-repartidor/alta-repartidor.component';
 import { ListadoRepartidoresComponent } from './componentes/listado-repartidores/listado-repartidores.component';
 import { DetalleRepartidoresComponent } from './componentes/detalle-repartidores/detalle-repartidores.component';
 import { MasterRepatidoresComponent } from './componentes/master-repatidores/master-repatidores.component';
@@ -37,7 +35,6 @@ import { MasterRepatidoresComponent } from './componentes/master-repatidores/mas
   declarations: [
     AppComponent,
     CabeceraComponent,
-    TablaPaisesComponent,
     BienvenidaComponent,
     BusquedaComponent,
     TablaActoresComponent,
@@ -52,7 +49,6 @@ import { MasterRepatidoresComponent } from './componentes/master-repatidores/mas
     ListadoPeliculasComponent,
     LoginComponent,
     DetalleGithubComponent,
-    AltaRepartidorComponent,
     ListadoRepartidoresComponent,
     DetalleRepartidoresComponent,
     MasterRepatidoresComponent

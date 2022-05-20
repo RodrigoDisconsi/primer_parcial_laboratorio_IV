@@ -35,7 +35,8 @@ export class AltaRepartidorComponent implements OnInit {
   cargarRepartidor(){
     this.cargando = true;
     this.repartidor.id = Guid.create().toString();
-    this.repartidor.nombre = this.paisSeleccionado.name;
+    this.repartidor.nombre = this.altaRepartidorForm.value.nombre;
+    this.repartidor.nacionalidad = this.paisSeleccionado;
     this.repartidor.edad = this.altaRepartidorForm.value.edad;
     this.repartidor.capTrans = this.altaRepartidorForm.value.capsTrans;
     this.repartidor.unidadPropia = this.altaRepartidorForm.value.unidadPropia;
