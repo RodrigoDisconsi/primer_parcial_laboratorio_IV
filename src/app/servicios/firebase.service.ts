@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { PeliculaInterface } from '../models/pelicula-interface';
 import { map } from 'rxjs/operators';
+import { UserInterface } from '../models/user-interface';
 
 @Injectable({
   providedIn: 'root'
@@ -29,9 +30,8 @@ export class FirebaseService {
     return this.afs.collection(entidad).doc(obj.id).delete();
   }
 
-  getPeliculasXActor(obj:any){
-  return this.afs.collection('peliculas', ref => ref.where('actor', '==', obj)).valueChanges();
+  getWithFilter(entidad:string, campo:string, value:string){
+    return this.afs.collection(entidad, ref => ref.where(campo, '==', value)).valueChanges();
   }
-
 
 }

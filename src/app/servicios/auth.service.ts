@@ -3,13 +3,14 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 // import { AngularFirestore} from '@angular/fire/firestore';
 import { BehaviorSubject, Observable, of } from 'rxjs';
+import { UserInterface } from '../models/user-interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  public user:any;
+  public user:UserInterface;
   public username = new BehaviorSubject<string>("");
   public loggedIn = new BehaviorSubject<boolean>(false); 
 
@@ -32,6 +33,12 @@ export class AuthService {
 
   login(email:string, password:string): Promise<any>{
     return this.fauth.signInWithEmailAndPassword(email,password);
+  }
+
+  refreshData(userParam:UserInterface){
+    this.user = userParam;
+    this.username.next(userParam.username);
+    this.loggedIn.next(true);
   }
 
 }

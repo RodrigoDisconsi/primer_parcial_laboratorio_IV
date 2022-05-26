@@ -6,10 +6,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from './material/material.module';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFireModule } from '@angular/fire';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -22,6 +22,11 @@ import { DetalleRepartidoresComponent } from './componentes/detalle-repartidores
 import { MasterRepatidoresComponent } from './componentes/master-repatidores/master-repatidores.component';
 import { PizzaComponent } from './componentes/pizza/pizza.component';
 import { ModificaComponent } from './componentes/pizza/modifica/modifica.component';
+import { AltaComponent } from './componentes/pizza/alta/alta.component';
+import { ListaComponent } from './componentes/pizza/lista/lista.component';
+import { BorraComponent } from './componentes/pizza/borra/borra.component';
+// import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.component';
+// import { AltaRepartidorComponent } from './componentes/alta-repartidor/alta-repartidor.component';
 
 @NgModule({
   declarations: [
@@ -35,18 +40,23 @@ import { ModificaComponent } from './componentes/pizza/modifica/modifica.compone
     DetalleRepartidoresComponent,
     MasterRepatidoresComponent,
     PizzaComponent,
-    ModificaComponent
+    ModificaComponent,
+    AltaComponent,
+    ListaComponent,
+    BorraComponent,
+    // TablaPaisesComponent,
+    // AltaRepartidorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule,
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
     HttpClientModule
   ],
   providers: [],

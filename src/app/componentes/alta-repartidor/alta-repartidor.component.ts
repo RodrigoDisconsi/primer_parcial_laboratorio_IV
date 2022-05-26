@@ -16,9 +16,10 @@ export class AltaRepartidorComponent implements OnInit {
   public paisSeleccionado:any;
   public cargando:boolean = false;
   public altaRepartidorForm = this.formBuilder.group({
+    dni: ['', [Validators.required, Validators.pattern("^[0-9]*$"), Validators.minLength(8)]],
     nombre: ['', [Validators.required]],
-    edad: ['', Validators.required],
-    capsTrans: [1],
+    edad: ['', [Validators.required, Validators.pattern("^[0-9]*$"), Validators.min(18)]],
+    capsTrans: [1, [Validators.required, Validators.pattern("^[0-9]*$"), Validators.min(1)]],
     unidadPropia: [false]
   });
 
@@ -64,10 +65,16 @@ export class AltaRepartidorComponent implements OnInit {
       retorno = "Empty.";
     }
     else if(this.f[field].hasError("min")) {
-      retorno = "Dato inválido";
+      if(field == "edad")
+        retorno = "must be over 18 years of age";
+      else
+        retorno = "at least 1";
     }
     else if(this.f[field].hasError("email")){
       retorno = "Not valid email.";
+    }
+    else if(this.f[field].getError('minlength') || this.f[field].getError('pattern')){
+      retorno = "Invalid DNI format"
     }
     return retorno;
   }

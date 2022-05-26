@@ -12,6 +12,13 @@
             <h4 class="mb-3">Repartidor</h4>
             <form [formGroup]="altaRepartidorForm" class="needs-validation">
               <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="firstName">DNI</label>
+                  <input type="text" formControlName="dni" class="form-control form-style" id="dni" placeholder="DNI..." [ngClass]="{'is-invalid': isNotValidField('dni'), 'is-valid': !isNotValidField('dni') && this.f['dni'].touched}" required>
+                  <div class="invalid-feedback">
+                      {{getErrorMessage('dni')}}
+                  </div>
+                </div>
                   <div class="col-md-6 mb-3">
                     <label for="firstName">Nombre</label>
                     <input type="text" formControlName="nombre" class="form-control form-style" id="firstName" placeholder="Nombre..." [ngClass]="{'is-invalid': isNotValidField('nombre'), 'is-valid': !isNotValidField('nombre') && this.f['nombre'].touched}" required>
