@@ -25,6 +25,8 @@ import { ModificaComponent } from './componentes/pizza/modifica/modifica.compone
 import { AltaComponent } from './componentes/pizza/alta/alta.component';
 import { ListaComponent } from './componentes/pizza/lista/lista.component';
 import { BorraComponent } from './componentes/pizza/borra/borra.component';
+
+import {ChartModule} from 'primeng/chart';
 // import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.component';
 // import { AltaRepartidorComponent } from './componentes/alta-repartidor/alta-repartidor.component';
 
@@ -57,7 +59,8 @@ import { BorraComponent } from './componentes/pizza/borra/borra.component';
     MatFormFieldModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
