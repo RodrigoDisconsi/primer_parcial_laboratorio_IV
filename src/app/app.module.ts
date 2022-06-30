@@ -25,8 +25,11 @@ import { ModificaComponent } from './componentes/pizza/modifica/modifica.compone
 import { AltaComponent } from './componentes/pizza/alta/alta.component';
 import { ListaComponent } from './componentes/pizza/lista/lista.component';
 import { BorraComponent } from './componentes/pizza/borra/borra.component';
+import { ToastModule } from 'primeng/toast';
 
 import {ChartModule} from 'primeng/chart';
+import { RegisterComponent } from './componentes/register/register.component';
+import { AceptarTerminosComponent } from './componentes/aceptar-terminos/aceptar-terminos.component';
 // import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.component';
 // import { AltaRepartidorComponent } from './componentes/alta-repartidor/alta-repartidor.component';
 
@@ -46,6 +49,8 @@ import {ChartModule} from 'primeng/chart';
     AltaComponent,
     ListaComponent,
     BorraComponent,
+    RegisterComponent,
+    AceptarTerminosComponent,
     // TablaPaisesComponent,
     // AltaRepartidorComponent
   ],
@@ -60,7 +65,8 @@ import {ChartModule} from 'primeng/chart';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     HttpClientModule,
-    ChartModule
+    ChartModule,
+    ToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]
